@@ -86,39 +86,16 @@
 <?php the_title(); ?>
 <img src="<?php the_post_thumbnail_url('full'); ?>" class="img-responsive">
 <?php
-global $wp_query;
-$postid = $wp_query->post->ID;
-echo get_post_meta($postid, 'biografia', true);
+echo get_post_field( 'biografia', get_post() );
 wp_reset_query();
 ?>
 <!-- Obras del Artista -->
-<?php
-$artworks = get_posts(array(
-  'post_type' => 'obra',
-  'meta_query' => array(
-    array(
-      'key' => 'autor', // name of custom field
-      'value' => 'Guillermo Nunez', // matches exaclty "123", not just 123.This prevents a match for "1234" 
-    )
-  )
-));
-if( $artworks ): ?>
-  <ul>
-  <?php foreach( $artworks as $artwork ): ?>
-    <?php 
+<?php $loop = new WP_Query( array( 'post_type' => 'obra', 'order' => 'ASC'));?>
 
-    $image = get_field('image', $artwork->ID);
-
-    ?>
-    <li>
-      <a href="<?php echo get_permalink( $artwork->ID ); ?>">
-        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" width="30" />
-        <?php echo get_the_title( $artwork->ID ); ?>
-      </a>
-    </li>
-  <?php endforeach; ?>
-  </ul>
-<?php endif; ?>
+      <?php while ( $loop->have_posts() ) : $loop->the_post();?>
+ <h4><?php the_title() ?></h4>
+ <!-- <p><?php get_the_field('autor', get_post() ); ?></p> -->
+  <?php endwhile; wp_reset_query(); ?>
     </div>
   </article>
 <?php endwhile; ?>
