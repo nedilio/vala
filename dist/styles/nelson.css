@@ -1,0 +1,49 @@
+/*nelson.css*/
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:100');
+article, aside, footer, header, nav, section, body {
+    font-family: 'Yantramanav', sans-serif !important;
+
+}
+
+
+/*Obras Single*/
+.btn {
+
+}
+.boton-cotizar {
+    border: 3px solid #bababa;
+    color: #bababa;
+    font-family: inherit;
+    font-size: inherit;
+    background: none;
+    cursor: pointer;
+    padding: 10px 60px;
+    display: inline-block;
+/*    margin: 15px 30px;*/
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.boton-cotizar:after {
+	width: 100%;
+	height: 0;
+	top: 0;
+	left: 0;
+	background: #bababa;
+}
+
+.boton-cotizar:hover,
+.boton-cotizar:active {
+	color: #fff;
+    background: #bababa;
+}
+
+.boton-cotizar:hover:after,
+.boton-cotizar:active:after {
+	height: 100%;
+}
