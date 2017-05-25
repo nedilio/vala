@@ -6,7 +6,7 @@
     </div>
     <div class="col">
        <?php
-            $autor= get_post_meta($post->ID,'autor_text',true );
+            $autor= get_post_meta($post->ID,'autor',false)[0]['post_title'];
             $titulo = get_the_title();
             $tecnica = get_post_meta($post->ID,'tecnica',true );
             $medida = get_post_meta($post->ID,'medida',true );
@@ -24,8 +24,10 @@
     </div>
 </div>
 <div class="row">
-    <?php previous_post_link('%link', 'Previous in category', TRUE); ?> 
+    <?php previous_post_link('<strong>%link</strong>'); ?> 
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium voluptatem architecto repellendus aliquam voluptatibus quis error, aliquid sunt ut numquam distinctio. Porro a minima nemo suscipit unde nostrum laborum atque.</p>
+    <?php next_post_link( '<strong>%link</strong>' ); ?>
+
 </div>
 
 

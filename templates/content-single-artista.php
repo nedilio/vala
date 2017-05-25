@@ -15,21 +15,19 @@
     </div>
     <div class="row">
         
-         <?php $autor_single = get_the_title();?>
+         <?php $autor_single = get_the_title();
+        echo $autor_single;
+        $count = 0;?>
           <!-- Obras del Artista -->
-          <?php $loop = new WP_Query( array( 'post_type' => 'obra', 'order' => 'ASC' ));?>
+          <?php $loop = new WP_Query( array( 'post_type' => 'obra',
+                                            'order' => 'ASC',
+                                            'meta_key' => 'autor_text', 
+                                            'meta_value' => $autor_single,
+                                           ));?>
               <?php while ( $loop->have_posts() ) : $loop->the_post();?>
-                  <?php $autor_obra= get_post_meta($post->ID,'autor_text',true );?>
-                      <?php
-                          if ($autor_single == $autor_obra){
-                              echo '<a href="';
-                              the_permalink();                                
-                              echo '">';
-                              the_post_thumbnail('thumbnail');
-                              echo'</a>';
-                          }
-                      
-                      ?>
+                      <div class="col">
+                          <a href="<?php the_permalink()?>"><?php the_post_thumbnail('thumbnail');?></a>
+                      </div>
           <?php endwhile; wp_reset_query(); ?>
     </div>
 </article>
