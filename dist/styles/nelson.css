@@ -4,7 +4,33 @@ article, aside, footer, header, nav, section, body {
     font-family: 'Yantramanav', sans-serif !important;
 
 }
+/*HOME*/
+.slider-wrapper{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.artistas-wrapper{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.carousel-prev,.carousel-next,.carousel-prev-obra,.carousel-next-obra{
+    color: dimgray !important;
+    font-size: 35px;
+    opacity: 0.6;
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    z-index: 999;
+}
+.carousel-prev{
+    left: 10px;
+}
+.carousel-right{
+    right: 10px;
+}
 
+
+/*fin home*/
 
 /*Obras Single*/
 .btn {

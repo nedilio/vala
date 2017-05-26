@@ -10,7 +10,7 @@
             </p>
         </div>
         <div class="col">
-            <?php the_post_thumbnail(); ?>
+            <?php the_post_thumbnail('obras_artistas_home'); ?>
         </div>
     </div>
     <div class="row">
@@ -21,13 +21,14 @@
           <!-- Obras del Artista -->
           <?php $loop = new WP_Query( array( 'post_type' => 'obra',
                                             'order' => 'ASC',
-                                            'meta_key' => 'autor_text', 
-                                            'meta_value' => $autor_single,
+                                            'meta_key' => 'autor_text',
+                                            'meta_value' => $autor_single
                                            ));?>
               <?php while ( $loop->have_posts() ) : $loop->the_post();?>
                       <div class="col">
                           <a href="<?php the_permalink()?>"><?php the_post_thumbnail('thumbnail');?></a>
                       </div>
+                      
                       <?php
 //echo key(get_post_meta($post->ID,'autor',false)[0]).'---';
 // $array=(get_post_meta($post->ID,'autor',false)[0]);
