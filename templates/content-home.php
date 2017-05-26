@@ -55,17 +55,16 @@
         <div class="row">
             <a class="carousel-prev-obra"><span class="icon-chevron-left"></span></a>
             <div class="multiple-items-obra col-sm-12 col-md-10 offset-md-1">
-                <?php $loop = new WP_Query( array( 'post_type' => 'obra',) ); ?>
+                <?php $loop = new WP_Query( array( 'post_type' => 'obra','meta_key' => 'destacada','meta_value'=>1) ); ?>
                 <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
                 <div class="text-center">
                     <a href="<?php the_permalink(); ?>">
-                        <?php  the_post_thumbnail('obras_artistas_home'); ?>
+                        <?php  the_post_thumbnail('obras_artistas_home',['class' => 'img-home']); ?>
                     </a>
                     <div>
-                        <h3>
+                        <p>
                             <?php echo get_the_title(); ?>
-                        </h3>
-                        <span>Destacado?: <?php;echo get_post_field( 'destacado', get_post() )?></span>
+                        </p>
                     </div>
                 </div>
                 <?php endwhile; wp_reset_query(); ?>
@@ -90,13 +89,12 @@
                 <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
                 <div class="text-center">
                     <a href="<?php the_permalink(); ?>">
-                        <?php  the_post_thumbnail('obras_artistas_home'); ?>
+                        <?php  the_post_thumbnail('obras_artistas_home',['class' => 'img-home']); ?>
                     </a>
                     <div>
-                        <h3>
+                        <p>
                             <?php echo get_the_title(); ?>
-                        </h3>
-                        <span>Destacado?: <?php;echo get_post_field( 'destacado', get_post() )?></span>
+                        </p>
                     </div>
                 </div>
                 <?php endwhile; wp_reset_query(); ?>
