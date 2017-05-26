@@ -1,0 +1,85 @@
+<?php while (have_posts()) : the_post(); ?>
+<article <?php post_class(); ?>>
+    <div class="row">
+        <div class="col-8">
+            <h2>
+                <?php the_title(); ?>
+            </h2>
+            <p>
+                <?php echo get_post_field( 'biografia', get_post() );?>
+            </p>
+        </div>
+        <div class="col">
+            <?php the_post_thumbnail('obras_artistas_home'); ?>
+        </div>
+    </div>
+    <div class="row">
+        
+         <?php $autor_single = get_the_title();
+//        echo $autor_single;
+        $count = 0;?>
+          <!-- Obras del Artista -->
+          <?php $loop = new WP_Query( array( 'post_type' => 'obra',
+                                            'order' => 'ASC',
+                                            'meta_key' => 'autor_text',
+                                            'meta_value' => $autor_single
+                                           ));?>
+              <?php while ( $loop->have_posts() ) : $loop->the_post();?>
+                      <div class="col">
+                          <a href="<?php the_permalink()?>"><?php the_post_thumbnail('thumbnail');?></a>
+                      </div>
+                      
+                      <?php
+//echo key(get_post_meta($post->ID,'autor',false)[0]).'---';
+// $array=(get_post_meta($post->ID,'autor',false)[0]);
+//        print_r(array_keys($array)[11]);
+//        print_r(get_post_meta($post->ID,'autor',false));
+        ?>
+          <?php endwhile; wp_reset_query(); ?>
+    </div>
+<div class="row">
+    <h1>codigo de pods</h1>
+    
+    <div>
+    <?php $loop = new WP_Query( array( 'post_type' => 'obra',
+                                            'order' => 'ASC',
+                                            'meta_key' => 'autor_text',
+                                            'meta_value' => $autor_single
+                                           ));?>
+              <?php while ( $loop->have_posts() ) : $loop->the_post();?>
+
+                      
+ <?php 
+    	//get Pods object for current post
+    	$pod = pods( 'obra', get_the_id() );
+//        echo 'resultado de la funcion pod';
+//        print_r($pod); //'resultado de la funcion pods'. $pod;
+	//get the value for the relationship field
+	$related = $pod->field( 'autor' );
+//        print_r($related);
+	//loop through related field, creating links to their own pages
+	//only if there is anything to loop through
+
+			//get id for related post and put in ID
+			//for advanced content types use $id = $rel[ 'id' ];
+			$id = $related[ 'ID' ];
+//        $autor_obra=get_the_title($id);
+//        echo 'el autor de la obra es: '.$autor_obra;
+			//show the related post name as link
+			echo '<a href="'.esc_url( get_permalink( $id ) ).'">'.get_the_title( $id ).'</a>';
+			//get the value for some_field in related post and echo it
+//			$someField = get_post_meta( $id, 'biografia', true );
+//			echo $someField;
+
+        
+        
+        if (the_title($id)==$autor_single) {
+//            echo 'esta obra es de: '.$autor_single;
+        }
+?>
+          <?php endwhile; wp_reset_query(); ?>
+       
+    </div>
+</div>
+</article>
+<?php endwhile; ?>

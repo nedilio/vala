@@ -9,6 +9,8 @@
                 <div class="col text-left">
                     <?php
                     $autor= get_post_meta($post->ID,'autor',false)[0]['post_title'];
+                    $autor_url=get_post_meta($post->ID,'autor',false)[0]['guid'];
+//                    print_r(get_post_meta($post->ID,'autor',false)[0]);
                     $titulo = get_the_title();
                     $tecnica = get_post_meta($post->ID,'tecnica',true );
                     $alto = get_post_meta($post->ID,'alto',true );
@@ -17,7 +19,7 @@
                     $anio = get_post_meta($post->ID,'anio',true );
                 ?>
                         <h3>
-                            <?php echo $autor;?>
+                            <a href="<?php echo $autor_url;?>"><?php echo $autor;?></a>
                         </h3>
                         <h4 class="titulo-obra"><em><?php echo $titulo.', '.$anio;?></em></h4>
                         <br>
