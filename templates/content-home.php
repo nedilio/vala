@@ -25,8 +25,8 @@
                         <div class="carousel-item <?php echo $class;?>">
                             <?php the_post_thumbnail('tamano_slider',['class' => 'd-block img-fluid']);?>
                             <div class="carousel-caption d-none d-md-block">
-                                    <?php //the_title();?>
-                                    <?php //the_content();?>
+                                <?php //the_title();?>
+                                <?php //the_content();?>
                             </div>
                         </div>
                         <?php $count++;?>
@@ -58,9 +58,11 @@
                 <?php $loop = new WP_Query( array( 'post_type' => 'obra','meta_key' => 'destacada','meta_value'=>1) ); ?>
                 <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
                 <div class="text-center">
-                    <a href="<?php the_permalink(); ?>">
-                        <?php  the_post_thumbnail('obras_artistas_home',['class' => 'img-home']); ?>
-                    </a>
+                    <div class="item-scale">
+                        <a href="<?php the_permalink(); ?>">
+                            <?php  the_post_thumbnail('obras_artistas_home',['class' => 'img-home']); ?>
+                        </a>
+                    </div>
                     <div>
                         <p>
                             <?php echo get_the_title(); ?>
@@ -88,9 +90,11 @@
                 <?php $loop = new WP_Query( array( 'post_type' => 'artista','meta_key'=>'destacado','meta_value'=>1) ); ?>
                 <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
                 <div class="text-center">
-                    <a href="<?php the_permalink(); ?>">
-                        <?php  the_post_thumbnail('obras_artistas_home',['class' => 'img-home']); ?>
-                    </a>
+                    <div class="item-scale">
+                        <a href="<?php the_permalink(); ?>">
+                            <?php  the_post_thumbnail('obras_artistas_home',['class' => 'img-home']); ?>
+                        </a>
+                    </div>
                     <div>
                         <p>
                             <?php echo get_the_title(); ?>
@@ -136,13 +140,13 @@
 
             });
         });
-        
+
         $(document).ready(function() {
             console.log("ready!");
             $('.multiple-items-obra').slick({
                 infinite: true,
                 slidesToShow: 3,
-                slidesToScroll: 1,
+                slidesToScroll: 3,
                 prevArrow: $('.carousel-prev-obra'),
                 nextArrow: $('.carousel-next-obra'),
                 //                responsive: [{

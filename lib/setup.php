@@ -36,7 +36,7 @@ function setup() {
   // http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
   add_image_size('tamano_slider',1000,300,true); //tamaño de imagen para el slider con crop
-  add_image_size( 'obras_artistas_home', 230, 230,true ); //tamaño de imagen para el slider de otros servicios
+  add_image_size( 'obras_artistas_home', 307, 230,true ); //tamaño de imagen para el slider de otros servicios
   add_image_size( 'obras-single', 300 ); //tamaño de imagen para el slider de otros servicios
 
   // Enable post formats
