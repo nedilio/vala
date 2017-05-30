@@ -28,3 +28,10 @@ foreach ($sage_includes as $file) {
 unset($file, $filepath);
 
 show_admin_bar( false );
+
+// Replaces the excerpt "Read More" text by a link
+function new_excerpt_more($more) {
+       global $post;
+	return '<a class="text-uppercase text-center boton-vermas" href="'. get_permalink($post->ID) . '"> Ver más</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');

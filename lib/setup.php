@@ -35,9 +35,9 @@ function setup() {
   // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
   // http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
-  add_image_size('tamano_slider',1000,300,true); //tamaño de imagen para el slider con crop
-  add_image_size( 'obras_artistas_home', 307, 230,true ); //tamaño de imagen para el slider de otros servicios
-  add_image_size( 'obras-single', 300 ); //tamaño de imagen para el slider de otros servicios
+  add_image_size( 'grid', 300, 300,true ); //tamaño de imagen para el grid del page artistas servicios
+  add_image_size( 'grid-carousel', 247, 247,true ); //tamaño de imagen para el carousel del home
+  add_image_size( 'obras-single', 300 ); //tamaño de imagen para el single de las obras
 
   // Enable post formats
   // http://codex.wordpress.org/Post_Formats
@@ -83,13 +83,14 @@ add_action('widgets_init', __NAMESPACE__ . '\\widgets_init');
 function display_sidebar() {
   static $display;
 
-  isset($display) || $display = !in_array(true, [
+  isset($display) || $display = !in_array(false, [
     // The sidebar will NOT be displayed if ANY of the following return true.
     // @link https://codex.wordpress.org/Conditional_Tags
     is_404(),
     is_front_page(),
-    is_page_template('template-custom.php','template-home.php'),
+    is_page_template('template-custom.php','template-home.php','template-grid.php'),
     is_single(),
+      is_page ('artistas','ofertas','obras'),
   ]);
 
   return apply_filters('sage/display_sidebar', $display);

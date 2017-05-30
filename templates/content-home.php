@@ -1,111 +1,62 @@
-<!-- Indicators -->
-<section id="slider-home" class="slider-wrapper">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10 offset-md-1 col-sm-12">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <?php $loop = new WP_Query( array( 'post_type' => 'slider') );
-                      $count=0;
-                      $class='active';?>
-                        <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                        <?php if ($count!=0) $class = '';?>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="<?php echo $count;?>" class="<?php echo $class;?>">
-                            <?php $count++;?>
-                            <?php endwhile; wp_reset_query(); ?>
-                    </ol>
-                    <div class="carousel-inner text-center" role="listbox">
-                        <?php $loop = new WP_Query( array( 'post_type' => 'slider') );
-                              $count=0;
-                              $class='active';?>
-
-                        <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                        <?php if ($count!=0)
-                                $class = '';?>
-                        <div class="carousel-item <?php echo $class;?>">
-                            <?php the_post_thumbnail('tamano_slider',['class' => 'd-block img-fluid']);?>
-                            <div class="carousel-caption d-none d-md-block">
-                                <?php //the_title();?>
-                                <?php //the_content();?>
-                            </div>
-                        </div>
-                        <?php $count++;?>
-                        <?php endwhile; wp_reset_query(); ?>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="obras-home" class="obras-wrapper">
-
-    <div class="container carousel-wrap">
-        <div class="text-center">
-            <h1>Obras Destacadas</h1>
-        </div>
-        <div class="row">
-            <a class="carousel-prev-obra"><span class="icon-chevron-left"></span></a>
-            <div class="multiple-items-obra col-sm-12 col-md-10 offset-md-1">
-                <?php $loop = new WP_Query( array( 'post_type' => 'obra','meta_key' => 'destacada','meta_value'=>1) ); ?>
-                <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                <div class="text-center">
-                    <div class="item-scale">
-                        <a href="<?php the_permalink(); ?>">
-                            <?php  the_post_thumbnail('obras_artistas_home',['class' => 'img-home']); ?>
-                        </a>
-                    </div>
-                    <div>
-                        <p>
-                            <?php echo get_the_title(); ?>
-                        </p>
-                    </div>
-                </div>
-                <?php endwhile; wp_reset_query(); ?>
-                <!--            </div>-->
-            </div>
-            <a class="carousel-next-obra"><span class="icon-chevron-right"></span></a>
-        </div>
-    </div>
-</section>
-
-
 <section id="artistas-home" class="artistas-wrapper">
 
     <div class="container carousel-wrap">
-        <div class="text-center">
-            <h1>Artistas Destacados</h1>
-        </div>
         <div class="row">
-            <a class="carousel-prev"><span class="icon-chevron-left"></span></a>
-            <div class="multiple-items col-sm-12 col-md-10 offset-md-1">
-                <?php $loop = new WP_Query( array( 'post_type' => 'artista','meta_key'=>'destacado','meta_value'=>1) ); ?>
-                <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                <div class="text-center">
-                    <div class="item-scale">
-                        <a href="<?php the_permalink(); ?>">
-                            <?php  the_post_thumbnail('obras_artistas_home',['class' => 'img-home']); ?>
-                        </a>
+            <div class=" col">
+                <a class="carousel-prev"><span class="icon-chevron-left"></span></a>
+                <div class="multiple-items">
+                    <?php $loop = new WP_Query( array( 'post_type' => 'artista','meta_key'=>'destacado','meta_value'=>1) ); ?>
+                    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                    <div class="col text-center">
+                        <a href="<?php the_permalink();?>"><?php  the_post_thumbnail('grid-carousel',['class' => 'img-fluid img-carousel']); ?></a>
+                        <div class="nombre-artista-carousel">
+                            <h5>
+                                <?php the_title();?>
+                            </h5>
+                        </div>
+                        <div>
+                            <?php 
+                            $idobra = 0;
+                            $idobra = get_post_meta($post->ID,'obras',false)[0]['ID'];
+//                            echo $idobra;
+                            unset($obraThumbnail);
+$obraThumbnail = get_the_post_thumbnail( $idobra, 'grid-carousel', array( 'class' => 'img-fluid img-carousel' ) );
+                            if ($idobra != 0) {
+                                echo $obraThumbnail;
+                            }
+                            else {
+                                echo 'S/O';
+                            }
+                            ?>
+                        </div>
                     </div>
-                    <div>
-                        <p>
-                            <?php echo get_the_title(); ?>
-                        </p>
-                    </div>
+                    <?php endwhile; wp_reset_query(); ?>
                 </div>
-                <?php endwhile; wp_reset_query(); ?>
-                <!--            </div>-->
+                <a class="carousel-next"><span class="icon-chevron-right"></span></a>
             </div>
-            <a class="carousel-next"><span class="icon-chevron-right"></span></a>
+
         </div>
+    </div>
+</section>
+
+<section id="noticia" class="noticia-wrapper container">
+
+
+    <?php $loop = new WP_Query( array( 'post_type' => 'post', 'post_per_page' => 1) ); ?>
+    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+    <div class="row">
+        <div class="col-md-4 image-noticia">
+            <?php the_post_thumbnail('large',['class' => 'img-fluid'])?>
+        </div>
+        <div class="col-md-8 excerpt-noticia">
+            <h2 class="text-uppercase">
+                <?php the_title()?>
+            </h2>
+            <p>
+                <?php the_excerpt();?>
+            </p>
+        </div>
+        <?php endwhile; wp_reset_query(); ?>
     </div>
 </section>
 
@@ -117,7 +68,7 @@
             console.log("ready!");
             $('.multiple-items').slick({
                 infinite: true,
-                slidesToShow: 3,
+                slidesToShow: 4,
                 slidesToScroll: 1,
                 prevArrow: $('.carousel-prev'),
                 nextArrow: $('.carousel-next'),
@@ -130,9 +81,9 @@
                 //                    }
                 //                }],
                 responsive: [{
-                    breakpoint: 576,
+                    breakpoint: 768,
                     settings: {
-                        slidesToShow: 1,
+                        slidesToShow: 2,
                         slidesToScroll: 1,
                         infinite: true
                     }
@@ -145,7 +96,7 @@
             console.log("ready!");
             $('.multiple-items-obra').slick({
                 infinite: true,
-                slidesToShow: 3,
+                slidesToShow: 4,
                 slidesToScroll: 3,
                 prevArrow: $('.carousel-prev-obra'),
                 nextArrow: $('.carousel-next-obra'),
