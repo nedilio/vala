@@ -50,6 +50,9 @@ body {
     margin-top: 25px;
     /*    margin-bottom: 25px;*/
 }
+.texto-header {
+    margin-top: 15px;
+}
 
 .menu-back {
     background: transparent !important;
@@ -57,8 +60,11 @@ body {
 
 ul.navbar-nav.mr-auto>li>a {
     color: #878787;
-    margin-left: 45px;
+    margin-right: 45px;
     text-decoration: none;
+}
+ul.navbar-nav.mr-auto>li:last-child a {
+    margin-right: 0;
 }
 
 ul.navbar-nav.mr-auto>li>a:hover {
@@ -71,7 +77,7 @@ ul.navbar-nav.mr-auto>li.current_page_item>a {
 }
 
 a.nav-link.active {
-    color: red;
+    color: #ce171b;
 }
 
 a.nav-link {
@@ -105,7 +111,7 @@ span.icon-circle {
 }
 
 .social-icons a {
-    font-size: 25px;
+    font-size: 30px;
     color: #878787;
     text-decoration: none;
 }
@@ -123,7 +129,8 @@ span.icon-circle {
 
 .slider-wrapper,
 .artistas-wrapper,
-.obras-wrapper {
+.obras-wrapper,
+.descripcion-wrapper {
     margin-top: 30px;
     margin-bottom: 30px;
 }
@@ -136,16 +143,26 @@ span.icon-circle {
 
 .carousel-prev,
 .carousel-next,
-.carousel-prev-obra,
-.carousel-next-obra {
+.carousel-prev-artista,
+.carousel-next-artista {
     color: #878787 !important;
     font-size: 35px;
     opacity: 0.6;
+    z-index: 999;
     position: absolute;
     top: 50%;
     transform: translatey(-50%);
-    z-index: 999;
 }
+
+/*
+.carousel-prev,
+.carousel-next,
+{
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+}
+*/
 
 .boton-vermas {
     display: block;
@@ -169,6 +186,7 @@ span.icon-circle {
     color: #878787;
     background-color: #fff;
 }
+
 
 /*
 .item-scale .img-home {
@@ -194,12 +212,37 @@ span.icon-circle {
     right: -20px;
 }
 
+@media (max-width: 576px) {
+    .carousel-prev {
+        left: -0px;
+    }
+    .carousel-next {
+        right: -0px;
+    }
+}
+
+@media (max-width: 991px) {
+    ul.navbar-nav.mr-auto>li>a {
+        margin-left: 0;
+    }
+    .mr-auto {
+        margin-top: 15px;
+    }
+}
+
+.slick-slide img {
+    display: inline-block !important;
+}
+
+
+/*
 .item-scale {
     position: relative;
     border: 1px solid #333;
     margin: 2%;
     overflow: hidden;
 }
+*/
 
 .nombre-artista-carousel {
     margin-top: 15px;
@@ -220,8 +263,35 @@ span.icon-circle {
     padding-top: 25px;
 }
 
-/*fin home*/
 
+/*fin home*/
+/*ARTISTAS SINGLE*/
+.img-bio {
+    display: inline-block;
+    float: right;
+    margin-left: 20px;
+}
+.slick-dots li {
+    /* display: inline-block; */
+    /* content: "ljasdlasd"; */
+    background: #b3b3b3;
+    border-radius: 50%;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.slick-dots li.slick-active {
+    background-color: #565654;
+}
+.slick-dots li button {
+    display: none;
+}
+.cedula-obra {
+    margin-top: 20px;
+}
+/*FIN ARTISTAS SINGLE*/
 
 /*Obras Single*/
 

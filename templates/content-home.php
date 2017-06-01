@@ -1,9 +1,22 @@
-<section id="artistas-home" class="artistas-wrapper">
+<section id="descripcion" class="descripcion-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="text-center">Vala Galeria de Arte</h1>
+                <?php the_content(); ?>
+            </div>
+        </div>
+    </div>
+</section>
 
+<section id="artistas-home" class="artistas-wrapper">
     <div class="container carousel-wrap">
         <div class="row">
-            <div class=" col">
+            <div class="col-xs-1 hidden-md-up">
                 <a class="carousel-prev"><span class="icon-chevron-left"></span></a>
+            </div>
+            <div class="col col-xs-10">
+                <a class="carousel-prev hidden-sm-down"><span class="icon-chevron-left"></span></a>
                 <div class="multiple-items">
                     <?php $loop = new WP_Query( array( 'post_type' => 'artista','meta_key'=>'destacado','meta_value'=>1) ); ?>
                     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
@@ -20,7 +33,7 @@
                             $idobra = get_post_meta($post->ID,'obras',false)[0]['ID'];
 //                            echo $idobra;
                             unset($obraThumbnail);
-$obraThumbnail = get_the_post_thumbnail( $idobra, 'grid-carousel', array( 'class' => 'img-fluid img-carousel' ) );
+                            $obraThumbnail = get_the_post_thumbnail( $idobra, 'grid-carousel', array( 'class' => 'img-fluid img-carousel' ) );
                             if ($idobra != 0) {
                                 echo $obraThumbnail;
                             }
@@ -32,16 +45,16 @@ $obraThumbnail = get_the_post_thumbnail( $idobra, 'grid-carousel', array( 'class
                     </div>
                     <?php endwhile; wp_reset_query(); ?>
                 </div>
+                <a class="carousel-next hidden-sm-down"><span class="icon-chevron-right"></span></a>
+            </div>
+            <div class="col-xs-1 hidden-md-up">
                 <a class="carousel-next"><span class="icon-chevron-right"></span></a>
             </div>
-
         </div>
     </div>
 </section>
 
 <section id="noticia" class="noticia-wrapper container">
-
-
     <?php $loop = new WP_Query( array( 'post_type' => 'post', 'post_per_page' => 1) ); ?>
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
     <div class="row">
@@ -72,50 +85,23 @@ $obraThumbnail = get_the_post_thumbnail( $idobra, 'grid-carousel', array( 'class
                 slidesToScroll: 1,
                 prevArrow: $('.carousel-prev'),
                 nextArrow: $('.carousel-next'),
-                //                responsive: [{
-                //                    breakpoint: 770,
-                //                    settings: {
-                //                        slidesToShow: 1,
-                //                        slidesToScroll: 1,
-                //                        infinite: true
-                //                    }
-                //                }],
                 responsive: [{
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
-                        infinite: true
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                            infinite: true
+                        }
+                    },
+                    {
+                        breakpoint: 575,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            infinite: true
+                        }
                     }
-                }]
-
-            });
-        });
-
-        $(document).ready(function() {
-            console.log("ready!");
-            $('.multiple-items-obra').slick({
-                infinite: true,
-                slidesToShow: 4,
-                slidesToScroll: 3,
-                prevArrow: $('.carousel-prev-obra'),
-                nextArrow: $('.carousel-next-obra'),
-                //                responsive: [{
-                //                    breakpoint: 770,
-                //                    settings: {
-                //                        slidesToShow: 1,
-                //                        slidesToScroll: 1,
-                //                        infinite: true
-                //                    }
-                //                }],
-                responsive: [{
-                    breakpoint: 576,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        infinite: true
-                    }
-                }]
+                ]
 
             });
         });
