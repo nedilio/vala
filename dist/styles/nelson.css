@@ -50,6 +50,7 @@ body {
     margin-top: 25px;
     /*    margin-bottom: 25px;*/
 }
+
 .texto-header {
     margin-top: 15px;
 }
@@ -63,9 +64,13 @@ ul.navbar-nav.mr-auto>li>a {
     margin-right: 45px;
     text-decoration: none;
 }
+
+
+/*
 ul.navbar-nav.mr-auto>li:last-child a {
     margin-right: 0;
 }
+*/
 
 ul.navbar-nav.mr-auto>li>a:hover {
     color: #000;
@@ -114,9 +119,21 @@ span.icon-circle {
     font-size: 30px;
     color: #878787;
     text-decoration: none;
+    margin-right: 15px;
+    -webkit-transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+    transition: all 600ms ease;
 }
 
-.social-icons a:hover {
+.social-icons:last-child a {
+    margin-right: 0px;
+}
+
+.social-icons a:hover,
+.social-icons a:active,
+.social-icons a:focus {
     color: #000;
     text-decoration: none;
 }
@@ -153,6 +170,7 @@ span.icon-circle {
     top: 50%;
     transform: translatey(-50%);
 }
+
 
 /*
 .carousel-prev,
@@ -202,6 +220,13 @@ span.icon-circle {
 .item-scale:hover .img-home {
     transform: scale(1.1);
 }
+
+.item-scale {
+    position: relative;
+    border: 1px solid #333;
+    margin: 2%;
+    overflow: hidden;
+}
 */
 
 .carousel-prev {
@@ -221,6 +246,12 @@ span.icon-circle {
     }
 }
 
+@media (min-width: 991px) {
+    ul.navbar-nav.mr-auto>li:last-child a {
+        margin-right: 0;
+    }
+}
+
 @media (max-width: 991px) {
     ul.navbar-nav.mr-auto>li>a {
         margin-left: 0;
@@ -228,21 +259,15 @@ span.icon-circle {
     .mr-auto {
         margin-top: 15px;
     }
+    .menu-item {
+        text-align: center;
+        font-size: 1.4em;
+    }
 }
 
 .slick-slide img {
     display: inline-block !important;
 }
-
-
-/*
-.item-scale {
-    position: relative;
-    border: 1px solid #333;
-    margin: 2%;
-    overflow: hidden;
-}
-*/
 
 .nombre-artista-carousel {
     margin-top: 15px;
@@ -265,12 +290,16 @@ span.icon-circle {
 
 
 /*fin home*/
+
+
 /*ARTISTAS SINGLE*/
+
 .img-bio {
     display: inline-block;
     float: right;
     margin-left: 20px;
 }
+
 .slick-dots li {
     /* display: inline-block; */
     /* content: "ljasdlasd"; */
@@ -282,16 +311,27 @@ span.icon-circle {
     cursor: pointer;
     margin-right: 20px;
 }
+
 .slick-dots li.slick-active {
     background-color: #565654;
 }
+
 .slick-dots li button {
     display: none;
 }
+
 .cedula-obra {
     margin-top: 20px;
 }
+.boton-obra {
+    padding: 2px 12px !important;
+    margin-left: 10px;
+    color: red !important;
+}
+
+
 /*FIN ARTISTAS SINGLE*/
+
 
 /*Obras Single*/
 
@@ -349,8 +389,37 @@ span.icon-circle {
     display: block;
 }
 
+  img.desaturated {
+    filter: none;
+    -webkit-filter: grayscale(100%);
+    -moz-filter:    grayscale(100%);
+    -ms-filter:     grayscale(100%);
+    -o-filter:      grayscale(100%);
+    cursor: pointer;
+    transition: all 500ms ease;
+  }
+  img.desaturated:hover {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+    -moz-filter:    grayscale(0%);
+    -ms-filter:     grayscale(0%);
+    -o-filter:      grayscale(0%);
+  }
 
 /*FIN GRID DE IMAGENES*/
+
+
+/*CONTACTO*/
+
+.input-vala {
+    border-radius: 8px;
+}
+.input-vala:focus {
+    outline: none;
+}
+
+
+/*FIN CONTACTO*/
 
 
 /*INLINE*/

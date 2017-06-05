@@ -59,13 +59,15 @@
                                 if ($autor_obra == $autor_single) { ?>
                             <div>
                                 <a href="<?php the_permalink()?>">
-                                    <?php the_post_thumbnail('grid');?>
+                                    <?php the_post_thumbnail('grid',['class'=> 'img-fluid']);?>
                                 </a>
                                 <div class="cedula-obra">
                                     <p><span class="text-uppercase"><strong><?php the_title()?>, <?php echo get_post_field( 'anio', get_post() )?></strong> - </span>
                                         <?php echo get_post_field( 'tecnica', get_post() )?> | 
                                         <?php echo get_post_field( 'ancho', get_post() )?> x
-                                        <?php echo get_post_field( 'alto', get_post() )?> cm.</p>
+                                        <?php echo get_post_field( 'alto', get_post() )?> cm. <a href="<?php the_permalink()?>"><button type="button" class="boton-cotizar boton-obra">Cotizar</button></a></p>
+                                        <?php echo get_post_field( 'url', get_post() )?>
+                                        
                                 </div>
                             </div>
 

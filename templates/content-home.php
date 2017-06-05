@@ -82,9 +82,12 @@
             $('.multiple-items').slick({
                 infinite: true,
                 slidesToShow: 4,
-                slidesToScroll: 1,
+                slidesToScroll: -1,
                 prevArrow: $('.carousel-prev'),
                 nextArrow: $('.carousel-next'),
+                speed: 6000,
+                autoplay: true,
+                autoplaySpeed:0,
                 responsive: [{
                         breakpoint: 768,
                         settings: {

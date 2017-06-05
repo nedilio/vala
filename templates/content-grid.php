@@ -13,10 +13,10 @@
         <?php $loop = new WP_Query( $array);?>
 
         <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-        <div class="col-3">
+        <div class="col-lg-3 col-sm-6 col-xs-12">
             <div class="">
                 <a href="<?php the_permalink(); ?>">
-                    <?php  the_post_thumbnail('grid',['class' => 'img-fluid']); ?>
+                    <?php  the_post_thumbnail('grid',['class' => 'img-fluid desaturated']); ?>
                 </a>
                 <div>
                     <p>
