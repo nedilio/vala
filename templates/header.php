@@ -8,7 +8,7 @@
             </div>
             <div class=" row text-uppercase justify-content-center texto-header">
                 <p class="texto-menu"><span class="texto-gris">Galeria de Arte </span></p>
-                <p class="texto-menu"> | <strong>Vanguardias Latinoamericanas</strong></p>
+<!--                <p class="texto-menu"> | <strong>Vanguardias Latinoamericanas</strong></p>-->
             </div>
         </div>
         <!--        <div class="row">-->

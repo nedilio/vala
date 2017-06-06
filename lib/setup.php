@@ -36,7 +36,7 @@ function setup() {
   // http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
   add_image_size( 'grid', 300, 300,true ); //tamaño de imagen para el grid del page artistas servicios
-  add_image_size( 'grid-carousel', 247, 247,true ); //tamaño de imagen para el carousel del home
+  add_image_size( 'grid-carousel', 300, 200,true ); //tamaño de imagen para el carousel del home
   add_image_size( 'obras-single', 300 ); //tamaño de imagen para el single de las obras
 
   // Enable post formats
