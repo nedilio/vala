@@ -1,0 +1,315 @@
+/*HOME*/
+
+.slider-wrapper,
+.artistas-wrapper,
+.obras-wrapper,
+.descripcion-wrapper,
+.ofertas-wrapper {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+    display: block !important;
+}
+
+.carousel-prev,
+.carousel-next,
+.carousel-prev-artista,
+.carousel-next-artista {
+    color: #878787 !important;
+    font-size: 35px;
+    opacity: 0.6;
+    z-index: 999;
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+}
+
+
+/*
+.carousel-prev,
+.carousel-next,
+{
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+}
+*/
+
+.boton-vermas {
+    display: block;
+    width: 150px;
+    height: 45px;
+    border: #878787 2px solid;
+    color: #000;
+    margin: auto;
+    margin-top: 30px;
+    padding: 8px;
+    font-weight: bold;
+    -webkit-transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+    transition: all 600ms ease;
+}
+
+.boton-vermas:hover,
+.boton-vermas:focus {
+    text-decoration: none;
+    color: #fff;
+    background-color: #878787;
+}
+
+.carousel-prev {
+    left: -20px;
+}
+
+.carousel-next {
+    right: -20px;
+}
+
+@media (max-width: 576px) {
+    .carousel-prev {
+        left: -0px;
+    }
+    .carousel-next {
+        right: -0px;
+    }
+}
+
+@media (min-width: 991px) {
+    ul.navbar-nav.mr-auto>li:last-child a {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    ul.navbar-nav.mr-auto>li>a {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .mr-auto {
+        margin-top: 15px;
+    }
+    .menu-item {
+        text-align: center;
+        font-size: 1.4em;
+    }
+}
+
+.slick-slide img {
+    display: inline-block !important;
+}
+
+.nombre-artista-carousel {
+    margin-top: 15px;
+}
+
+.noticia-wrapper {
+    margin-top: 50px;
+    color: #878787;
+}
+
+.image-noticia {
+    /*    padding: 25px;*/
+}
+
+.excerpt-noticia {
+    /*    padding-top: 25px;*/
+}
+
+.content-low {
+    border-top: 2px solid #878787;
+    padding-top: 10px;
+    text-align: center;
+    color: #000;
+}
+
+.content-low h3 {
+    color: #878787;
+    font-weight: bold;
+}
+
+.autores-items .image-carousel-wrapper,
+.obras-items .image-carousel-wrapper,
+.image-carousel-wrapper {
+    -webkit-transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+    transition: all 600ms ease;
+}
+
+.autores-items:hover .image-carousel-wrapper,
+.obras-items:hover .image-carousel-wrapper {
+    opacity: 0.5;
+}
+
+.image-carousel-wrapper:hover {
+    opacity: 1 !important;
+}
+
+
+/*fin home*/
+
+
+/*ARTISTAS SINGLE*/
+
+.img-bio {
+    display: inline-block;
+    float: right;
+    margin-left: 20px;
+}
+
+.slick-dots li {
+    background: #b3b3b3;
+    border-radius: 50%;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.slick-dots li.slick-active {
+    background-color: #565654;
+}
+
+.slick-dots li button {
+    display: none;
+}
+
+.slick-dots {
+    margin-top: 20px;
+}
+
+.cedula-obra {
+    margin-top: 25px;
+    font-size: 1.2em;
+    max-width: 80%;
+    display: inline-block;
+}
+
+.boton-obra {
+    padding: 3px 15px !important;
+    margin-left: 10px;
+    color: red !important;
+    border: 2px solid red !important;
+}
+
+.boton-obra:hover,
+.boton-obra:focus {
+    padding: 3px 15px !important;
+    margin-left: 10px;
+    color: #fff !important;
+    border: 2px solid red !important;
+    background-color: red !important;
+}
+
+#curriculum h3,
+#biografia h2 {
+    font-weight: bold;
+}
+
+
+/*FIN ARTISTAS SINGLE*/
+
+
+/*Obras Single*/
+
+.btn {}
+
+.boton-cotizar {
+    border: 3px solid red;
+    color: red;
+    font-family: inherit;
+    font-size: inherit;
+    background: none;
+    cursor: pointer;
+    padding: 3px 20px;
+    display: inline-block;
+    /*    margin: 15px 30px;*/
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.boton-cotizar:after {
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background: #878787;
+}
+
+.boton-cotizar:hover,
+.boton-cotizar:active {
+    color: #fff;
+    background: red;
+}
+
+.boton-cotizar:hover:after,
+.boton-cotizar:active:after {
+    height: 100%;
+}
+
+.oferta {
+    color: red;
+    font-weight: 900 !important;
+}
+
+.autor-name a {
+    color: red;
+    font-size: 21px;
+    font-weight: bold;
+    /* margin-bottom: 5px !important; */
+}
+
+.autor-name a:hover,
+.autor-name a:focus {
+    color:#878787;
+    text-decoration: none;
+}
+
+
+/*FIN OBRAS SINGLE*/
+
+
+/*OFERTA PAGE*/
+
+.slide-obra {
+    padding: 10px;
+}
+
+.autor-oferta {
+    margin-top: 15px;
+}
+
+
+/*FIN OFERTA PAGE*/
+
+
+/*CONTACTO*/
+
+.input-vala {
+    border-radius: 8px;
+}
+
+.input-vala:focus {
+    outline: none;
+}
+
+.ofertas-wrapper {
+    /*    margin-top: */
+}
+
+
+/*FIN CONTACTO*/

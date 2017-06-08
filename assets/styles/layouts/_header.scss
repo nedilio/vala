@@ -1,0 +1,43 @@
+.logo-container {
+    margin-top: 25px;
+    /*    margin-bottom: 25px;*/
+}
+
+.texto-header {
+    margin-top: 15px;
+}
+
+.menu-back {
+    background: transparent !important;
+}
+
+ul.navbar-nav.mr-auto>li>a {
+    color: #878787;
+    margin-right: 45px;
+    text-decoration: none;
+}
+
+
+/*
+ul.navbar-nav.mr-auto>li:last-child a {
+    margin-right: 0;
+}
+*/
+
+ul.navbar-nav.mr-auto>li>a:hover {
+    color: #000;
+}
+
+ul.navbar-nav.mr-auto>li.current_page_item>a {
+    color: red;
+    /*    font-weight: 900;*/
+}
+
+a.nav-link.active {
+    color: #ce171b;
+    font-weight: 900;
+}
+
+a.nav-link {
+    color: grey;
+}

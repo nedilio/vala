@@ -1,0 +1,42 @@
+.footer-wrapper {
+    border-top: 2px #878787 solid;
+    margin-bottom: 20px;
+}
+
+.footer-wrapper p {
+    padding-top: 15px;
+}
+
+span.icon-circle {
+    font-size: 7px;
+    position: relative;
+    bottom: 2px;
+}
+
+.social-icons {
+    margin-top: 15px;
+    /*    margin-bottom: -15px;*/
+}
+
+.social-icons a {
+    font-size: 30px;
+    color: #878787;
+    text-decoration: none;
+    margin-right: 15px;
+    -webkit-transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+    transition: all 600ms ease;
+}
+
+.social-icons:last-child a {
+    margin-right: 0px;
+}
+
+.social-icons a:hover,
+.social-icons a:active,
+.social-icons a:focus {
+    color: #000;
+    text-decoration: none;
+}
