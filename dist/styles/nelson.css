@@ -12,13 +12,15 @@
     font-weight: bold;
 }
 
-
-/*
 @font-face {
     font-family: 'din_font';
     src: url('../fonts/din-black-webfont.woff2') format('woff2'), url('../fonts/din-black-webfont.woff') format('woff');
-    font-weight: black;
+    font-weight: 900;
 }
+
+
+/*
+
 */
 
 
@@ -79,12 +81,13 @@ ul.navbar-nav.mr-auto>li>a:hover {
 }
 
 ul.navbar-nav.mr-auto>li.current_page_item>a {
-    color: #1B1B1B;
-    font-weight: bold;
+    color: red;
+    /*    font-weight: 900;*/
 }
 
 a.nav-link.active {
     color: #ce171b;
+    font-weight: 900;
 }
 
 a.nav-link {
@@ -149,7 +152,8 @@ span.icon-circle {
 .slider-wrapper,
 .artistas-wrapper,
 .obras-wrapper,
-.descripcion-wrapper {
+.descripcion-wrapper,
+.ofertas-wrapper {
     margin-top: 50px;
     margin-bottom: 50px;
 }
@@ -258,6 +262,7 @@ span.icon-circle {
 @media (max-width: 991px) {
     ul.navbar-nav.mr-auto>li>a {
         margin-left: 0;
+        margin-right: 0;
     }
     .mr-auto {
         margin-top: 15px;
@@ -333,8 +338,6 @@ span.icon-circle {
 }
 
 .slick-dots li {
-    /* display: inline-block; */
-    /* content: "ljasdlasd"; */
     background: #b3b3b3;
     border-radius: 50%;
     display: inline-block;
@@ -351,15 +354,36 @@ span.icon-circle {
 .slick-dots li button {
     display: none;
 }
-
-.cedula-obra {
+.slick-dots {
     margin-top: 20px;
 }
 
+.cedula-obra {
+    margin-top: 25px;
+    font-size: 1.2em;
+    max-width: 80%;
+    display: inline-block;
+}
+
 .boton-obra {
-    padding: 2px 12px !important;
+    padding: 3px 15px !important;
     margin-left: 10px;
     color: red !important;
+    border: 2px solid red !important;
+}
+
+.boton-obra:hover,
+.boton-obra:focus {
+    padding: 3px 15px !important;
+    margin-left: 10px;
+    color: #fff !important;
+    border: 2px solid red !important;
+    background-color: red !important;
+}
+
+#curriculum h3,
+#biografia h2 {
+    font-weight: bold;
 }
 
 
@@ -371,18 +395,18 @@ span.icon-circle {
 .btn {}
 
 .boton-cotizar {
-    border: 3px solid #bababa;
-    color: #878787;
+    border: 3px solid red;
+    color: red;
     font-family: inherit;
     font-size: inherit;
     background: none;
     cursor: pointer;
-    padding: 10px 60px;
+    padding: 3px 20px;
     display: inline-block;
     /*    margin: 15px 30px;*/
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-weight: 700;
+    font-weight: bold;
     outline: none;
     position: relative;
     -webkit-transition: all 0.3s;
@@ -401,12 +425,30 @@ span.icon-circle {
 .boton-cotizar:hover,
 .boton-cotizar:active {
     color: #fff;
-    background: #878787;
+    background: red;
 }
 
 .boton-cotizar:hover:after,
 .boton-cotizar:active:after {
     height: 100%;
+}
+
+.oferta {
+    color: red;
+    font-weight: 900 !important;
+}
+
+.autor-name a {
+    color: red;
+    font-size: 21px;
+    font-weight: bold;
+    /* margin-bottom: 5px !important; */
+}
+
+.autor-name a:hover,
+.autor-name a:focus {
+    color: :#878787;
+    text-decoration: none;
 }
 
 
@@ -444,6 +486,20 @@ img.desaturated:hover {
 /*FIN GRID DE IMAGENES*/
 
 
+/*OFERTA PAGE*/
+
+.slide-obra {
+    padding: 10px;
+}
+.autor-oferta {
+    margin-top: 15px;
+}
+
+
+
+/*FIN OFERTA PAGE*/
+
+
 /*CONTACTO*/
 
 .input-vala {
@@ -453,7 +509,9 @@ img.desaturated:hover {
 .input-vala:focus {
     outline: none;
 }
-
+.ofertas-wrapper {
+/*    margin-top: */
+}
 
 /*FIN CONTACTO*/
 
@@ -466,6 +524,11 @@ img.desaturated:hover {
 
 .texto-menu {
     letter-spacing: 4px;
+}
+
+.texto-negro {
+    color: #000;
+    font-weight: 900;
 }
 
 

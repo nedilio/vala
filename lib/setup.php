@@ -38,6 +38,8 @@ function setup() {
   add_image_size( 'grid', 300, 300,true ); //tamaño de imagen para el grid del page artistas servicios
   add_image_size( 'grid-carousel', 300, 200,true ); //tamaño de imagen para el carousel del home
   add_image_size( 'obras-single', 300 ); //tamaño de imagen para el single de las obras
+  add_image_size( 'obras-single', 999999, 400,true ); //tamaño de imagen para el single de artistas
+    update_option( 'large_size_h', 400 );
 
   // Enable post formats
   // http://codex.wordpress.org/Post_Formats
