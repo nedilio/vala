@@ -1,3 +1,29 @@
+@font-face {
+    font-family: 'din_font';
+    src: url('../fonts/din-light-webfont.woff2') format('woff2'), url('../fonts/din-light-webfont.woff') format('woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'din_font';
+    src: url('../fonts/din-alternate-webfont.woff2') format('woff2'), url('../fonts/din-alternate-webfont.woff') format('woff');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'din_font';
+    src: url('../fonts/din-black-webfont.woff2') format('woff2'), url('../fonts/din-black-webfont.woff') format('woff');
+    font-weight: 900;
+}
+
+/*
+@font-face {
+    font-family: 'din_font';
+    src: url('../fonts/din-medium-webfont.woff2') format('woff2'), url('../fonts/din-medium-webfont.woff') format('woff');
+    font-weight: medium;
+}
+*/
+
 article,
 aside,
 footer,

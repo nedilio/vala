@@ -1,12 +1,12 @@
-<footer class="content-info" style="margin-top:30px;">
-           <div class="row justify-content-center social-icons">
-           <a href="https://www.facebook.com/GaleriaVala/" target="_blank"> <span class="icon-facebook-circled"></span></a>
-            <a href="https://twitter.com/galeriavala" target="_blank"><span class="icon-twitter-circled"></span></a>
-            <a href="https://www.instagram.com/galeriavala/" target="_blank"><span class="icon-instagram"></span></a>
-        </div>
+<footer class="content-info container" style="margin-top:30px;">
+    <div class="row justify-content-center social-icons">
+        <a href="https://www.facebook.com/GaleriaVala/" target="_blank"> <span class="icon-facebook-circled"></span></a>
+        <a href="https://twitter.com/galeriavala" target="_blank"><span class="icon-twitter-circled"></span></a>
+        <a href="https://www.instagram.com/galeriavala/" target="_blank"><span class="icon-instagram"></span></a>
+    </div>
     <div class="container footer-wrapper">
         <!--    <?php //dynamic_sidebar('sidebar-footer'); ?>-->
-<!--
+        <!--
         <div class="row justify-content-center social-icons">
            <a href="https://www.facebook.com/GaleriaVala/" target="_blank"> <span class="icon-facebook-circled"></span></a>
             <a href="https://twitter.com/galeriavala" target="_blank"><span class="icon-twitter-circled"></span></a>

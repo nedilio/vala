@@ -1,4 +1,4 @@
-<section id="artistas-home" class="artistas-wrapper">
+<section id="artistas-home" class="artistas-wrapper" style="width:100%;">
     <div class="carousel-wrap">
         <div class="row">
             <div class="col">
@@ -7,23 +7,12 @@
                     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
                     <div class="image-carousel-wrapper">
                         <a href="<?php the_permalink();?>"><?php  the_post_thumbnail('grid-carousel',['class' => 'img-fluid img-carousel']); ?></a>
-                        <?php 
-//                            $idobra = 0;
-  //                          $idobra = get_post_meta($post->ID,'obras',false)[0]['ID'];
-//                            echo $idobra;
-    //                        unset($obraThumbnail);
-      //                      $obraThumbnail = get_the_post_thumbnail( $idobra, 'grid-carousel', array( 'class' => 'img-fluid img-carousel' ) );
-        //                    if ($idobra != 0) {
-          //                      echo $obraThumbnail;
-            //                }
-              //              else {
-                //                echo 'S/O';
-                  //          }
-                    //        ?>
                     </div>
                     <?php endwhile; wp_reset_query(); ?>
                 </div>
             </div>
+        </div>
+        <div class="row">
             <div class="col">
                 <div class="obras-items">
                     <?php $loop = new WP_Query( array( 'post_type' => 'obra','meta_key'=>'destacada','meta_value'=>1) ); ?>
@@ -35,6 +24,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 </section>
 
@@ -73,87 +63,3 @@
         <?php endwhile; wp_reset_query(); ?>
     </div>
 </section>
-
-<script>
-    ;
-    (function($) {
-
-        $(document).ready(function() {
-            console.log("ready!");
-            $('.autores-items').slick({
-                infinite: true,
-                slidesToShow: 7,
-                slidesToScroll: -1,
-                prevArrow: $('.carousel-prev'),
-                nextArrow: $('.carousel-next'),
-                speed: 3000,
-                autoplay: true,
-                autoplaySpeed: 0,
-                cssEase: 'linear',
-                responsive: [{
-                        breakpoint: 575,
-                        settings: {
-                            slidesToShow: 4,
-                            slidesToScroll: -1,
-                            infinite: true,
-                            //                            autoplay:false,
-                        }
-                    },
-                    //                    {
-                    //                        breakpoint: 575,
-                    //                        settings: {
-                    //                            slidesToShow: 3,
-                    //                            slidesToScroll: -1,
-                    //                            infinite: true
-                    //                        }
-                    //                    }
-                ]
-
-            });
-
-        });
-
-        $(document).ready(function() {
-            console.log("ready!");
-            $('.obras-items').slick({
-                infinite: true,
-                slidesToShow: 7,
-                slidesToScroll: 1,
-                prevArrow: $('.carousel-prev'),
-                nextArrow: $('.carousel-next'),
-                speed: 3000,
-                autoplay: true,
-                autoplaySpeed: 0,
-                cssEase: 'linear',
-                responsive: [{
-                        breakpoint: 575,
-                        settings: {
-                            slidesToShow: 4,
-                            slidesToScroll: 1,
-                            infinite: true,
-                            //                            autoplay:false,
-                        }
-                    },
-                    //                    {
-                    //                        breakpoint: 575,
-                    //                        settings: {
-                    //                            slidesToShow: 3,
-                    //                            slidesToScroll: 1,
-                    //                            infinite: true
-                    //                        }
-                    //                    }
-                ]
-
-            });
-
-        });
-        $(document).ready(function() {
-            // Delay the action by 10000ms
-            setTimeout(function() {
-                // Display the div containing the class "bottomdiv"
-                $("#artistas-home").show();
-            }, 3000);
-        });
-    })(jQuery);
-
-</script>

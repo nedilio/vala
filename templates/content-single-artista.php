@@ -103,25 +103,3 @@
     </div>
 </article>
 <?php endwhile; ?>
-
-<script>
-    ;
-    (function($) {
-
-        $(document).ready(function() {
-            console.log("ready!");
-            $('.obras-single').slick({
-                infinite: true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                dots:true,
-                dotsClass:'slick-dots',
-                prevArrow: $('.carousel-prev-artista'),
-                nextArrow: $('.carousel-next-artista'),
-//                centerMode: true,
-            });
-        });
-
-    })(jQuery);
-
-</script>

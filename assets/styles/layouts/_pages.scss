@@ -28,6 +28,15 @@
     transform: translatey(-50%);
 }
 
+#artistas-home {
+    opacity: 0;
+    -webkit-transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+    transition: all 600ms ease;
+}
+
 
 /*
 .carousel-prev,
@@ -275,7 +284,7 @@
 
 .autor-name a:hover,
 .autor-name a:focus {
-    color:#878787;
+    color: #878787;
     text-decoration: none;
 }
 
