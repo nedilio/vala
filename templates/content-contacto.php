@@ -4,7 +4,8 @@
 
         <div class="col-md-4">
             <h4>Vala Galería</h4>
-            <p>contacto@vala.cl</p>
+            <p>Correo: contacto@vala.cl</p>
+            <p>Teléfono: +562 2893 2677 <span class="icon-circle"></span> +569 7766 7893</p>
             <p>Horario de Atención:</p>
             <p>Lunes a Viernes de 10:00 a 20:00 hrs.</p>
             <p>Sábado de 10:00 a 14:00 hrs.</p>

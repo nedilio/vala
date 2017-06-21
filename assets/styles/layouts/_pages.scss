@@ -37,6 +37,21 @@
     transition: all 600ms ease;
 }
 
+.welcome {
+    -vendor-animation-duration: 2s;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    z-index: 9999;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    color: #878787;
+}
+
+.welcome h1 {
+    font-size: 5em;
+}
+
 
 /*
 .carousel-prev,
@@ -183,6 +198,10 @@
     margin-right: 20px;
 }
 
+.slick-dots li:last-child {
+    margin-right: 0;
+}
+
 .slick-dots li.slick-active {
     background-color: #565654;
 }
@@ -193,13 +212,13 @@
 
 .slick-dots {
     margin-top: 20px;
+    padding: 0;
 }
 
 .cedula-obra {
     margin-top: 25px;
     font-size: 1.2em;
-    max-width: 80%;
-    display: inline-block;
+    display: block;
 }
 
 .boton-obra {
@@ -221,6 +240,14 @@
 #curriculum h3,
 #biografia h2 {
     font-weight: bold;
+}
+
+.side-menu {
+    position: absolute;
+    display: block;
+    z-index: 999;
+    background: white;
+    max-width: 90px;
 }
 
 
@@ -271,7 +298,7 @@
 }
 
 .oferta {
-    color: red;
+    color: black;
     font-weight: 900 !important;
 }
 

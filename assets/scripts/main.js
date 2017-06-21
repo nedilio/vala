@@ -30,12 +30,14 @@
             init: function () {
                 // JavaScript to be fired on the home page
                 $(document).ready(function () {
-                    // Delay the action by 10000ms
                     setTimeout(function () {
-                        // Display the div containing the class "bottomdiv"
                         $("#artistas-home").css('opacity', 1);
-                        console.log('ejecutando el aparecer en 2seg');
                     }, 4000);
+                });
+                $(document).ready(function () {
+                    setTimeout(function () {
+                        $('.welcome').addClass('animated fadeOutUp');
+                    }, 2000);
                 });
                 $('.autores-items').slick({
                     infinite: true,
@@ -115,6 +117,15 @@
                     dotsClass: 'slick-dots',
                     prevArrow: $('.carousel-prev-artista'),
                     nextArrow: $('.carousel-next-artista'),
+                    responsive: [{
+                            breakpoint: 575,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                autoplay:true,
+                            }
+                        },
+                    ]
                 });
                 // JavaScript to be fired on the about us page
             }

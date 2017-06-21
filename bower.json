@@ -8,6 +8,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "git://github.com/twbs/bootstrap.git#v4.0.0-alpha.6",
-    "slick-carousel": "^1.6.0"
+    "slick-carousel": "^1.6.0",
+    "animate.css": "^3.5.2"
   }
 }

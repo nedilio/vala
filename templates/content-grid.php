@@ -1,22 +1,19 @@
 <section id="grid">
     <div class="row">
-        <?php $slug = get_post_field( 'post_name', get_post() );
-        $slug = substr_replace($slug, "", -1);
-        //echo $slug;
-        if ($slug == obra) {
-            $array=array( 'post_type' => $slug, 'meta_key' => 'oferta', 'meta_value'=>1,);
-            //echo 'el areglo es de obras en oferta';
-        }
-        else {$array = array( 'post_type' => $slug,); }
+        <?php 
+       $array= array( 'post_type' => 'artista' , 'order'=>'ASC','posts_per_page' => -1); 
         ;?>
 
         <?php $loop = new WP_Query( $array);?>
 
         <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-        <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="col-lg-2 col-sm-3 col-xs-6 text-center">
             <div class="">
                 <a href="<?php the_permalink(); ?>">
-                    <?php  the_post_thumbnail('grid',['class' => 'img-fluid desaturated']); ?>
+                   <?php $image = get_post_field('obra_destacada');
+                  $image_url = pods_image_url ( $image['ID'], 'grid', ['class'=>'img-fluid desaturated']);?>
+                    <?php  //the_post_thumbnail('grid',['class' => 'img-fluid desaturated']); ?>
+                    <img src="<?php echo $image_url;?>" alt="<?php the_title();?>" class="img-fluid">
                 </a>
                 <div>
                     <p>
