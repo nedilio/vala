@@ -58,8 +58,8 @@
                                     <?php the_post_thumbnail('large',['class'=> 'img-fluid']);?>
                                 </a>
                                 <div class="cedula-obra">
-                                    <p><span class="text-uppercase texto-negro"><strong><?php the_title()?>, <?php echo get_post_field( 'anio', get_post() )?></strong> </span>-
-                                        <?php echo get_post_field( 'tecnica', get_post() )?> |
+                                    <p><span class="text-uppercase texto-negro"><span style="font-weight:bold"><?php the_title()?>, <?php echo get_post_field( 'anio', get_post() )?></span> </span>-
+                                        <?php echo get_post_field( 'tecnica', get_post() )?>.
                                         <?php echo get_post_field( 'alto', get_post() )?> x
                                         <?php echo get_post_field( 'ancho', get_post() )?> cm.</p>
                                 </div>

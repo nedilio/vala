@@ -107,7 +107,7 @@
             }
         },
         // About us page, note the change from about-us to about_us.
-        'obras': {
+        'ofertas': {
             init: function () {
                 $('.ofertas-carousel').slick({
                     infinite: true,
@@ -122,7 +122,7 @@
                             settings: {
                                 slidesToShow: 1,
                                 slidesToScroll: 1,
-                                autoplay:true,
+                                autoplay: true,
                             }
                         },
                     ]
@@ -141,6 +141,12 @@
                     prevArrow: $('.carousel-prev-artista'),
                     nextArrow: $('.carousel-next-artista'),
                 });
+            }
+            // JavaScript to be fired on the about us page
+        },
+        'blog': {
+            init: function () {
+                $('header.banner').css('display','none');
             }
             // JavaScript to be fired on the about us page
         },

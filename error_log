@@ -1,0 +1,1 @@
+[16-Jun-2017 19:11:18 UTC] PHP Fatal error:  Call to undefined function get_template_part() in /home/vala/public_html/wp-content/themes/valadist/index.php on line 1

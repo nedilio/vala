@@ -27,7 +27,7 @@ foreach ($sage_includes as $file) {
 }
 unset($file, $filepath);
 
-show_admin_bar( true );
+//show_admin_bar( false );
 
 // Replaces the excerpt "Read More" text by a link
 function new_excerpt_more($more) {

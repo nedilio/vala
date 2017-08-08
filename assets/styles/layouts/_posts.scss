@@ -1,0 +1,133 @@
+body.blog,
+body.single-post {
+    background-color: #e4e4e2;
+}
+
+.blog-post-container {
+    background-color: #fff;
+    //    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.sidebar-blog {
+    background-color: #bababa;
+    padding: 15px;
+    color: #000;
+    font-size: 1em;
+}
+
+.sidebar-blog .social-icons a {
+    color: #858585;
+}
+
+.sidebar-blog h1 {
+    text-transform: uppercase;
+    font-size: 1em;
+    margin-top: 15px;
+}
+
+.sidebar-blog h3 {
+    font-size: 1em;
+}
+
+@media screen and (min-width:992px) {
+    .posts-container {
+        height: 90vh;
+        overflow-y: scroll;
+    }
+    .posts-container::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        background-color: #F5F5F5;
+    }
+    .posts-container::-webkit-scrollbar {
+        width: 12px;
+        background-color: #F5F5F5;
+    }
+    .posts-container::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+        background-color: orangered;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .posts-container {
+        margin-top: 50px;
+    }
+    .menu-sidebar {
+        margin-top: 30px;
+    }
+}
+
+.navigation {
+    margin-bottom: 60px;
+}
+
+.sidebar-blog .row {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#menu-enlaces-de-interes {
+    list-style-type: none;
+    padding: 0;
+}
+
+#menu-enlaces-de-interes li a {
+    color: #000;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+#menu-enlaces-de-interes li {
+    text-align: center;
+}
+
+#menu-enlaces-de-interes li a:hover {
+    text-decoration: none;
+    color: red;
+}
+
+.entry-title {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+}
+
+.entry-summary {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+
+.entry-title a {
+    color: #000
+}
+
+.entry-title a:hover {
+    color: #858585;
+    text-decoration: none;
+}
+
+.entry-summary .boton-vermas {
+    background-color: orangered;
+    border-color: orangered;
+    color: #fff;
+}
+
+.entry-summary .boton-vermas:hover {
+    color: #000;
+}
+
+hr {
+    border: 1px solid #858585;
+    width: 90%;
+//    margin-top: 0 !important;
+//    margin-bottom: 0 !important;
+}
