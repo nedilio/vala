@@ -131,3 +131,10 @@ hr {
 //    margin-top: 0 !important;
 //    margin-bottom: 0 !important;
 }
+.single-post a {
+    color: red;
+}
+.single-post a:hover {
+    text-decoration: none;
+    color: #595959;
+}

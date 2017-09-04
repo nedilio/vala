@@ -3,6 +3,9 @@
 <img src="<?php echo get_template_directory_uri();?>/dist/images/ajax-loader.gif" alt="Loader">
 </div>
 <section id="artistas-home" class="artistas-wrapper" style="width:100%;">
+    <div class="link-obras hidden-lg-up text-center single-post a:hover" style="margin-bottom:20px; margin-top:-30px;">
+        <a href="<?php echo home_url() ;?>/artistas" >VER OBRAS</a>
+    </div>
     <div class="carousel-wrap">
         <div class="row">
             <div class="col">
