@@ -87,7 +87,7 @@
                             }, false);
 
                         </script>
-                        <?php echo do_shortcode('[contact-form-7 id="113" title="Formulario de contacto 1_copy"]');?>
+                        <?php echo do_shortcode('[contact-form-7 id="907" title="Form Cotizar"]');?>
                     </div>
                     <div class="modal-footer">
                         <!--

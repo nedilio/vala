@@ -21,6 +21,9 @@
         <?php wp_nav_menu( array('menu'=>'Enlaces de Interés', 'menu_class' => 'nav-sidebar',  ) ); ?>
     </div>
 </div>
+<div class="link-galeria text-center">
+<a href="https://www.vala.cl/category/galeria/"><span style="font-size: 1.3em; color: #cc0610; text-transform:uppercase; font-weight: bold;">Galería de Fotos VALA</span></a>
+</div>
 <div class="row justify-content-center social-icons">
     <a href="https://www.facebook.com/GaleriaVala/" target="_blank"> <span class="icon-facebook-circled"></span></a>
     <a href="https://twitter.com/galeriavala" target="_blank"><span class="icon-twitter-circled"></span></a>
