@@ -1,0 +1,17 @@
+.anios {
+    position: absolute;
+    color: red;
+    font-size: 25px;
+    left: 70%;
+    top: 7px;
+    font-weight: bold;
+}
+
+.aniosMobile {
+    color: red;
+    padding-top: 10px;
+    font-size: 26px;
+    display: inline-block;
+    margin: 0 auto;
+    font-weight: bold;
+}

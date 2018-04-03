@@ -5,7 +5,7 @@
     <meta name="description" content="<?php bloginfo('description'); ?>" />
     <link href="<?php echo get_template_directory_uri();?>/fontastic/styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Yantramanav:100" rel="stylesheet">
-    <!--  <link rel="stylesheet" href="<?php// echo get_template_directory_uri() ;?>/dist/styles/nelson.css">-->
+     <link rel="stylesheet" href="<?php echo get_template_directory_uri() ;?>/dist/styles/vala.css">
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
